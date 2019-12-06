@@ -1,0 +1,148 @@
+/* Adjust the html and body. */
+html, body
+{
+  max-width: 810px;
+  max-height: 743px;
+  width: 100%;
+  height: 100%;
+  user-select: none; /* Prevents the user from selecting anything. */
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+}
+/* Anti-size adjustment for padding. */
+div
+{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* Size adjustment for the whole thing. */
+.container
+{
+  width: 100%;
+  height: 100%;
+  zoom: 0.806; /* Zooms in/out. */
+}
+
+toBlur
+{
+  position: relative;
+}
+/* Configurations for the category boxes. */
+.category
+{
+  position: absolute;
+  font-size: 200%;
+  font-family: "Press Start 2P";
+  font-weight: bold;
+  BORDER: 3px solid;
+  height: 80px;
+  width: 165px;
+  /* Centering the text. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+}
+/* Configurations for the boxes. */
+.boxes
+{
+  position: absolute;
+  font-size: 300%; /* Starting font size. */
+  font-family: abel;
+  padding: 3px;
+  BORDER: 3px solid;
+  height: 165px;
+  width: 165px;
+  cursor: pointer;
+  /* Centering the text. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Default size for images. */
+img
+{
+  width: 162px;
+}
+
+/* Modal Content */
+#enlargeMe
+{
+  margin: auto; /* Adjusts the modal's position to be in the center. */
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+/* Modal Background */
+#modal
+{
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 1005px;
+  height: 920px;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+/* Box that contains the enlarged item. */
+#popupBox
+{
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: white;
+}
+/* Adjusts the image to make it fit inside the box. */
+#popupBox img
+{
+  width: 100%;
+  height: 100%;
+}
+/* Formats the enlarged text. */
+#formatEnlarge
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 3.6vw;
+  padding: 5%;
+}
+/* Animating the popup/modal. */
+#popupBox
+{
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.2s;
+  animation-name: zoom;
+  animation-duration: 0.2s;
+}
+@-webkit-keyframes zoom
+{
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+@keyframes zoom
+{
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+/* Adds a blur effect to the background. */
+.blurEffect
+{
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
